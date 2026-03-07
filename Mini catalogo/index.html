@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Catálogo</title>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<h1>Catálogo de Productos</h1>
+
+<div id="catalogo"></div>
+
+<div id="footer"></div>
+
+<script src="product-card/product-card.js"></script>
+<script src="js/products.js"></script>
+
+<script>
+
+fetch("components/header/header.html")
+.then(res => res.text())
+.then(data => {
+  document.getElementById("header").innerHTML = data;
+});
+
+
+fetch("components/footer/footer.html")
+.then(res => res.text())
+.then(data => {
+  document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+</body>
+</html>
